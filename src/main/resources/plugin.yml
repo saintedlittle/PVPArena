@@ -1,0 +1,10 @@
+name: PVPArena
+version: '${version}'
+main: com.github.saintedlittle.PVPArena
+api-version: '1.16'
+load: STARTUP
+commands:
+  pvp:
+    usage: /pvp [find]
+    description: Open PVP menu.
+    permission-message: pvparena.menu

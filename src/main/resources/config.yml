@@ -1,0 +1,11 @@
+"awaitingMessage": "Пошёл нахуй."
+"cancelAwaitingMessage": "Долбаёб."
+
+"deathMessage": "Вы были убиты игроком: %s! Желаем вам удачи!."
+"winnerMessage": "Поздравляю, вы победили в битве с %s!"
+
+
+"findPVP": "Игра была найдена! Вы играете с %s!"
+
+# очищать инвентарь после смерти?
+"clearInventory": false
