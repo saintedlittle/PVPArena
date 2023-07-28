@@ -19,6 +19,7 @@ public final class PVPArena extends JavaPlugin {
     public void onEnable() {
         config = getConfig();
         config.options().copyDefaults();
+        saveConfig();
 
         PVPStorage.setConfiguration(config);
 
@@ -28,8 +29,6 @@ public final class PVPArena extends JavaPlugin {
             Bukkit.getLogger().log(Level.WARNING, "SCHEMATICS NOT FOUND! CREATE AND DISABLE PLUGIN..");
             this.onDisable();
         }
-
-        saveConfig();
 
         getServer().getPluginManager().registerEvents(new OnDeath(), this);
         Objects.requireNonNull(this.getCommand("pvp")).setExecutor(new PVPCommand());
