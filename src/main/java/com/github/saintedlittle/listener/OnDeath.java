@@ -3,7 +3,6 @@ package com.github.saintedlittle.listener;
 import com.github.saintedlittle.data.PVPStorage;
 import net.kyori.adventure.text.Component;
 import org.bukkit.ChatColor;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -21,7 +20,6 @@ public class OnDeath implements Listener {
         if (killer == null)
             return;
 
-
         // Это сработает для обоих, там идёт проверка по ключу и значению одновременно.
         PVPStorage.removePlayingPlayer(killer);
 
@@ -30,5 +28,7 @@ public class OnDeath implements Listener {
         event.setKeepInventory(PVPStorage.getConfiguration().getBoolean("clearInventory"));
 
         killer.sendMessage(PVPStorage.getConfiguration().getString("winnerMessage").replace("%s", entity.getName()));
+
+        PVPStorage.removeActiveWorld(event.getEntity().getWorld());
     }
 }

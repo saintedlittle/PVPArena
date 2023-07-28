@@ -3,6 +3,8 @@ version: '${version}'
 main: com.github.saintedlittle.PVPArena
 api-version: '1.16'
 load: STARTUP
+depend:
+  - WorldEdit
 commands:
   pvp:
     usage: /pvp [find]
